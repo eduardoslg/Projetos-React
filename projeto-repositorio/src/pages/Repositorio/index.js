@@ -26,7 +26,7 @@ export default function Repositorio({match}){
         api.get(`/repos/${nomeRepo}/issues`, {
           params:{
             state: filters.find(f => f.active).state, 
-            per_page: 5
+            per_page: 8
           }
         })
       ]);
@@ -53,7 +53,7 @@ export default function Repositorio({match}){
         params:{
           state: filters[filterIndex].state,
           page,
-          per_page: 5,
+          per_page: 8,
         },
       });
 
