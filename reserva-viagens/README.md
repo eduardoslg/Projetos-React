@@ -1,15 +1,19 @@
 # Projeto página de Web de reserva de viagens.
 
-Neste projeto, você consegue visualizar os pacotes de viagens disponíveis, solicitar a reserva do pacote de viagem que desejar
-![alt text](./src/assets/home.png "página de visualização de reservas adquiridas")
+### Neste projeto, você consegue visualizar os pacotes de viagens disponíveis, solicitar a reserva do pacote de viagem que desejar
 
-E também visualizar as suas reservas adquiridas, assim como excluí-las.
-![alt text](./src/assets/visualizacao-de-reservas.png "página de visualização de reservas adquiridas")
+
+> <img src="./src/assets/home.png" alt="página principal" width="700" height="500"/>
+
+***
+
+### Também poderá visualizar as suas reservas adquiridas, assim como excluí-las.
+> <img src="./src/assets/visualizacao-de-reservas.png" alt="página de visualização de reservas adquiridas" width="700" height="500"/>
 
 
 ## Algumas observações
 
-Foram utilizadas várias bibliotecas nesse projeto, irei citar algumas e explicá-las.
+Projeto feito através do curso 'React Js do zero ao avançado na pratica' do professor Matheus Fraga
 
 
 
