@@ -21,7 +21,11 @@
   background: #FFF;
 }
 
-footer button{
+.link {
+  text-decoration: none;
+}
+
+.link button{
   border: 0;
   display: flex;
   padding: 10px;
@@ -29,6 +33,7 @@ footer button{
   border-radius: 4px;
   margin-top: 10px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .reservas #amount{
