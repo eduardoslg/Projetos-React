@@ -1,8 +1,13 @@
 # Projeto página de Web de reserva de viagens.
 
-Neste projeto, você consegue visualizar os pacotes de viagens disponíveis, solicitar a reserva do pacote de viagem que desejar e visualizar as suas reservas adquiridas.
-
+Neste projeto, você consegue visualizar os pacotes de viagens disponíveis, solicitar a reserva do pacote de viagem que desejar
 <img src="./src/assets/home.png" alt="página principal">
+
+E também visualizar as suas reservas adquiridas, assim como excluí-las.
+<img src="./src/assets/visualizacao-de-reservas.png" alt="página de visualização de reservas adquiridas">
+
+![alt text](./src/assets/visualizacao-de-reservas.png "página de visualização de reservas adquiridas")
+
 
 ## Algumas observações
 
