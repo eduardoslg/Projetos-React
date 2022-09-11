@@ -18,12 +18,14 @@ function App() {
   const [choiceTwo, setChoiceTwo] = useState(null)
   const [disabled, setDisabled] = useState(false)
 
-  // shuffle cards for new game
+  // Distribui as cartas para um novo jogo
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
       .sort(() => Math.random() - 0.5)
       .map(card => ({ ...card, id: Math.random() }))
       
+    setChoiceOne(null)
+    setChoiceTwo(null)
     setCards(shuffledCards)
     setTurns(0)
   }
@@ -34,7 +36,7 @@ function App() {
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
   }
 
-  // compare 2 selected cards
+  // Compara as duas cartas selecionadas
   useEffect(() => {
     if (choiceOne && choiceTwo) {
       setDisabled(true)
@@ -57,9 +59,7 @@ function App() {
     }
   }, [choiceOne, choiceTwo])
 
-  console.log(cards)
-
-  // reset choices & increase turn
+  // Reseta as escolhas & adiciona uma tentativa na contagem
   const resetTurn = () => {
     setChoiceOne(null)
     setChoiceTwo(null)
@@ -67,10 +67,15 @@ function App() {
     setDisabled(false)
   }
 
+  // Começa um novo jogo
+  useEffect(() => {
+    shuffleCards()
+  }, [])
+
   return (
     <div className="App">
-      <h1>Magic Match</h1>
-      <button onClick={shuffleCards}>New Game</button>
+      <h1>Jogo da Memória</h1>
+      <button onClick={shuffleCards}>Novo jogo</button>
 
       <div className="card-grid">
         {cards.map(card => (
@@ -84,6 +89,7 @@ function App() {
         ))}
       </div>
 
+      <p>Tentativas: {turns}</p>
     </div>
   );
 }
