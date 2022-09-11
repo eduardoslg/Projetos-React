@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import SingleCard from './components/SingleCard';
+import SingleCard from './components/SingleCard'
 
 const cardImages = [
   { "src": "/img/helmet-1.png" },
@@ -14,6 +14,8 @@ const cardImages = [
 function App() {
   const [cards, setCards] = useState([])
   const [turns, setTurns] = useState(0)
+  const [choiceOne, setChoiceOne] = useState(null)
+  const [choiceTwo, setChoiceTwo] = useState(null)
 
   // shuffle cards for new game
   const shuffleCards = () => {
@@ -25,7 +27,11 @@ function App() {
     setTurns(0)
   }
 
-  console.log(cards, turns)
+  // handle a choice
+  const handleChoice = (card) => {
+    console.log(card)
+    choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
+  }
 
   return (
     <div className="App">
@@ -37,6 +43,7 @@ function App() {
           <SingleCard 
             key={card.id}
             card={card}
+            handleChoice={handleChoice}
           />
         ))}
       </div>
